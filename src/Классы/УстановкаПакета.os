@@ -72,7 +72,7 @@
 	ТребуемаяВерсияСреды = Свойства.ВерсияСреды;
 	СистемнаяИнформация = Новый СистемнаяИнформация;
 	ВерсияСреды = СистемнаяИнформация.Версия;
-	Если СравнитьВерсии(ТребуемаяВерсияСреды, ВерсияСреды) > 0 Тогда
+	Если РаботаСВерсиями.СравнитьВерсии(ТребуемаяВерсияСреды, ВерсияСреды) > 0 Тогда
 		ТекстСообщения = СтрШаблон(
 			"Ошибка установки пакета <%1>: Обнаружена устаревшая версия движка OneScript.
 			|Требуемая версия: %2
@@ -270,59 +270,6 @@
 	Возврат Новый Структура("Оператор,Версия", Оператор, Версия);
 	
 КонецФункции
-
-// Compare two version strings.
-//
-// Parameters
-//  VersionString1  – String – version number like MM.{m|mm}.RR.BB
-//  VersionString2  – String – the second version number
-//
-// Return value:
-//   Number   – greater 0, if VersionString1 > VersionString2; 0, if versions are equal.
-Function СравнитьВерсии(Val VersionString1, Val VersionString2) Export
-	
-	String1 = ?(IsBlankString(VersionString1), "0.0.0.0", VersionString1);
-	String2 = ?(IsBlankString(VersionString2), "0.0.0.0", VersionString2);
-	
-	AdduceToUniformVersionFormat(String1, String2);
-	
-	Version1 = СтроковыеФункции.РазложитьСтрокуВМассивПодстрок(String1, ".");
-	Version2 = СтроковыеФункции.РазложитьСтрокуВМассивПодстрок(String2, ".");
-	
-	Result = 0;
-	For Digit = 0 To Version1.UBound() Do
-		Result = Number(Version1[Digit]) - Number(Version2[Digit]);
-		If Result <> 0 Then
-			Return Result;
-		EndIf; // Result <> 0
-	EndDo; // Digit = 0 To Version1.UBound()
-	Return Result;
-	
-КонецФункции
-
-Procedure AdduceToUniformVersionFormat(VersionString1, VersionString2) Export
-	
-	Version1Array 	= СтроковыеФункции.РазложитьСтрокуВМассивПодстрок(VersionString1, ".");
-	Version2Array 	= СтроковыеФункции.РазложитьСтрокуВМассивПодстрок(VersionString2, ".");
-	
-	Diff = Version2Array.Count() - Version1Array.Count();
-	
-	If Diff = 0 Then
-		Return;
-	EndIf; // Diff = 0
-	
-	Suffix = "";
-	For index = 1 To Max(Diff, -Diff) Do
-		Suffix = Suffix + ".0";
-	EndDo; // index = 1 To Max(Diff, -Diff)
-	
-	If Diff > 0 Then
-		VersionString1 = VersionString1 + Suffix;	
-	Else
-		VersionString2 = VersionString2 + Suffix;	
-	EndIf;
-	
-EndProcedure
 
 Функция КаталогСистемныхБиблиотек()
 	
