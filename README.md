@@ -19,3 +19,7 @@ OneScript Package Manager
 
 Справка из википедии: [Система управления пакетами](https://ru.wikipedia.org/wiki/%D0%A1%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F_%D0%BF%D0%B0%D0%BA%D0%B5%D1%82%D0%B0%D0%BC%D0%B8)
 
+# Сервера
+В настоящее время пакеты хранятся на двух серверах:
+- [hub.oscript.io](http://hub.oscript.io/download) - основной хаб пакетов
+- [hub.oscript.ru](http://hub.oscript.ru/download) - вторичный хаб пакетов. Используется, когда не удаётся получить данные с основного хаба
