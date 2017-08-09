@@ -24,14 +24,13 @@
         {
             "taskName": "Testing project (1testrunner)",
             "args": [
-                 "1testrunner",
+                "1testrunner",
                 "-runall",
                 "${workspaceRoot}/tests"
             ],
             "echoCommand": true,
             "showOutput": "always",
             "suppressTaskName": true,
-            // "isBuildCommand": false,
             "isTestCommand": false,
             "problemMatcher": {
                 "fileLocation": "absolute",
@@ -46,14 +45,13 @@
         {
             "taskName": "Testing project (opm test)",
             "args": [
-                 "oscript",
-                 "src/opm.os",
+                "oscript",
+                "src/opm.os",
                 "test"
             ],
             "echoCommand": true,
             "showOutput": "always",
             "suppressTaskName": true,
-            // "isBuildCommand": false,
             "isTestCommand": false,
             "problemMatcher": {
                 "fileLocation": "absolute",
@@ -68,7 +66,7 @@
         {
             "taskName": "Testing current test-file",
             "args": [
-                 "1testrunner",
+                "1testrunner",
                 "-run",
                 "${file}"
             ],
@@ -90,10 +88,10 @@
         {
             "taskName": "Exec all features",
             "args": [
-                 "1bdd",
+                "1bdd",
                 "${workspaceRoot}/features",
-                "-fail-fast", 
-                "-out", 
+                "-fail-fast",
+                "-out",
                 "${workspaceRoot}/exec.log"
             ],
             "echoCommand": true,
@@ -114,10 +112,10 @@
         {
             "taskName": "Exec feature",
             "args": [
-                 "1bdd",
+                "1bdd",
                 "${file}",
-                "-fail-fast", 
-                "-out", 
+                "-fail-fast",
+                "-out",
                 "${workspaceRoot}/exec.log"
             ],
             "echoCommand": true,
@@ -128,22 +126,22 @@
             "problemMatcher": {
                 "fileLocation": "absolute",
                 "pattern": [
-                {
-                    "regexp": "{Модуль\\s+(.+)\\s\\/\\s.*:\\s+(\\d+)\\s+\\/\\s+([^{]*)",
-                    "file": 1,
-                    "location": 2,
-                    "message": 3
-                }
+                    {
+                        "regexp": "{Модуль\\s+(.+)\\s\\/\\s.*:\\s+(\\d+)\\s+\\/\\s+([^{]*)",
+                        "file": 1,
+                        "location": 2,
+                        "message": 3
+                    }
                 ]
             }
         },
         {
             "taskName": "Exec feature for current step def",
             "args": [
-                 "1bdd",
+                "1bdd",
                 "${fileDirname}/../${fileBasenameNoExtension}.feature",
-                "-fail-fast", 
-                "-out", 
+                "-fail-fast",
+                "-out",
                 "${workspaceRoot}/exec.log"
             ],
             "echoCommand": true,
@@ -154,22 +152,22 @@
             "problemMatcher": {
                 "fileLocation": "absolute",
                 "pattern": [
-                {
-                    "regexp": "{Модуль\\s+(.+)\\s\\/\\s.*:\\s+(\\d+)\\s+\\/\\s+([^{]*)",
-                    "file": 1,
-                    "location": 2,
-                    "message": 3
-                }
+                    {
+                        "regexp": "{Модуль\\s+(.+)\\s\\/\\s.*:\\s+(\\d+)\\s+\\/\\s+([^{]*)",
+                        "file": 1,
+                        "location": 2,
+                        "message": 3
+                    }
                 ]
             }
         },
         {
             "taskName": "Generate feature steps",
             "args": [
-                 "1bdd",
+                "1bdd",
                 "gen",
                 "${file}",
-                "-out", 
+                "-out",
                 "${workspaceRoot}/exec.log"
             ],
             "echoCommand": true,
@@ -197,13 +195,14 @@
             "echoCommand": true,
             "showOutput": "always",
             "suppressTaskName": true,
-            "isBuildCommand": false
+            "isBuildCommand": false,
+            "problemMatcher": []
         },
         {
             "taskName": "OneScript: compile",
             "args": [
-                 "oscript",
-                 "-encoding=utf-8",
+                "oscript",
+                "-encoding=utf-8",
                 "-compile",
                 "${file}"
             ],
@@ -215,8 +214,8 @@
         {
             "taskName": "OneScript: check",
             "args": [
-                 "oscript",
-                 "-encoding=utf-8",
+                "oscript",
+                "-encoding=utf-8",
                 "-check",
                 "${file}"
             ],
@@ -228,8 +227,8 @@
         {
             "taskName": "OneScript: make",
             "args": [
-                 "oscript",
-                 "-encoding=utf-8",
+                "oscript",
+                "-encoding=utf-8",
                 "-make",
                 "${file}",
                 "${fileBasename}.exe"
@@ -242,8 +241,8 @@
         {
             "taskName": "OneScript: run",
             "args": [
-                 "oscript",
-                 "-encoding=utf-8",
+                "oscript",
+                "-encoding=utf-8",
                 "${file}"
             ],
             "echoCommand": true,
