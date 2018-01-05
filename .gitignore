@@ -1,2 +1,4 @@
 oscript_modules/
 test-reports/
+
+*.ospx
