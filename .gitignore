@@ -2,3 +2,4 @@ oscript_modules/
 test-reports/
 
 *.ospx
+src/oscript.cfg
