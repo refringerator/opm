@@ -1,9 +1,6 @@
 #!/bin/bash
 set -e
 
-opm install 1testrunner
-opm install 1bdd
-
 opm run coverage
 
 temp=`cat src/core/Модули/КонстантыOpm.os | grep "ВерсияПродукта = " | sed 's|[^"]*"||' | sed -r 's/".+//'`
