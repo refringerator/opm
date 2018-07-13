@@ -3,3 +3,5 @@ test-reports/
 coverage/
 *.ospx
 src/oscript.cfg
+
+src/cmd/oscript\.cfg
