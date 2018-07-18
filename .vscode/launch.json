@@ -8,10 +8,10 @@
             "name": "Отладка 1Script",
             "type": "oscript",
             "request": "launch",
-            "program": "${file}",
             "args": [],
+            "program": "${workspaceRoot}/src/cmd/opm.os",
             "cwd": "${workspaceRoot}",
-            "runtimeExecutable": "/usr/bin/oscript",
+            "runtimeExecutable": null,
             "debugPort": 2801,
             "protocol": "internal"
         }
