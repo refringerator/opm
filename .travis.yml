@@ -66,12 +66,12 @@ jobs:
             tags: true
         - provider: script
           skip_cleanup: true
-          script: docker run -it -v $(pwd):/work_dir evilbeaver/onescript:1.0.19 sh -c 'cd /work_dir; opm push --token $GITHUB_OAUTH_TOKEN --channel dev --file ./$PACKAGE_NAME-*.ospx; exit'
+          script: docker run -it -e GITHUB_OAUTH_TOKEN=$GITHUB_OAUTH_TOKEN -v $(pwd):/work_dir evilbeaver/onescript:1.0.19 sh -c 'cd /work_dir; opm push --token $GITHUB_OAUTH_TOKEN --channel dev --file ./$PACKAGE_NAME-*.ospx; exit'
           on:
             branch: develop
         - provider: script
           skip_cleanup: true
-          script: docker run -it -v $(pwd):/work_dir evilbeaver/onescript:1.0.19 sh -c 'cd /work_dir; opm push --token $GITHUB_OAUTH_TOKEN --channel stable --file ./$PACKAGE_NAME-*.ospx; exit'
+          script: docker run -it -e GITHUB_OAUTH_TOKEN=$GITHUB_OAUTH_TOKEN -v $(pwd):/work_dir evilbeaver/onescript:1.0.19 sh -c 'cd /work_dir; opm push --token $GITHUB_OAUTH_TOKEN --channel stable --file ./$PACKAGE_NAME-*.ospx; exit'
           on:
             branch: master
             tags: true
