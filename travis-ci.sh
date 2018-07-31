@@ -8,7 +8,7 @@ dpkg -i oscript.deb
 rm -f oscript.deb
 
 apt-get update
-apt-get install python3
+apt-get install -y python3
 
 opm install 1testrunner; 
 opm install 1bdd; 
