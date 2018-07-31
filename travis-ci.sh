@@ -7,6 +7,7 @@ curl http://oscript.io/downloads/$OSCRIPT_VERSION/deb > oscript.deb
 dpkg -i oscript.deb 
 rm -f oscript.deb
 
+apt-get update
 apt-get install python3
 
 opm install 1testrunner; 
