@@ -1,5 +1,10 @@
-oscript_modules/
-test-reports/
-coverage/
+oscript_modules/*
+tests-reports/*
+coverage/*
+bdd-*.xml
 *.ospx
 src/oscript.cfg
+
+src/cmd/oscript\.cfg
+exec.log
+test-reports/tests.xml
