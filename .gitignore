@@ -8,3 +8,4 @@ src/oscript.cfg
 src/cmd/oscript\.cfg
 exec.log
 test-reports/tests.xml
+tests.xml
