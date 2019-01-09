@@ -4,6 +4,7 @@ coverage/*
 bdd-*.xml
 *.ospx
 src/oscript.cfg
+opm\.cfg
 
 src/cmd/oscript\.cfg
 exec.log
