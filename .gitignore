@@ -5,7 +5,7 @@ bdd-*.xml
 *.ospx
 src/oscript.cfg
 opm\.cfg
-
+tests/testpackage
 src/cmd/oscript\.cfg
 exec.log
 test-reports/tests.xml
