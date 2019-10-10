@@ -21,7 +21,7 @@
     Приложение = Новый КонсольноеПриложение("opm", НСтр("ru='Пакетный менеджер для OneScript';en='Package manager for OneScript'"));
     Приложение.Версия("v version", КонстантыOpm.ВерсияПродукта);
 
-    Приложение.ДобавитьКоманду("a app", НСтр("r))u='Создать ';en='Create '") + ?(ЭтоWindows, "bat", "sh") + НСтр("ru='-файл для запуска скрипта в указанном каталоге';en='-file to run the script in the specified directory'"), Новый КомандаOpm_App);
+    Приложение.ДобавитьКоманду("a app", НСтр("ru='Создать ';en='Create '") + ?(ЭтоWindows, "bat", "sh") + НСтр("ru='-файл для запуска скрипта в указанном каталоге';en='-file to run the script in the specified directory'"), Новый КомандаOpm_App);
     Приложение.ДобавитьКоманду("b build", НСтр("ru='Собрать пакет из исходников';en='Build a package from source'"), Новый КомандаOpm_Build);
     Приложение.ДобавитьКоманду("c config", НСтр("ru='Задать пользовательские настройки';en='Configure user settings'"), Новый КомандаOpm_Config);
     Приложение.ДобавитьКоманду("i install", НСтр("ru='Выполнить установку пакета. 
