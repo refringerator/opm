@@ -71,17 +71,17 @@
 	|    <engine-version>1.0</engine-version>
 	|    <description>Это пакет для тестирования</description>
 	|    <author-email>mail@server.com</author-email>
-	|    <depends-on name=""asserts"" />
-	|    <depends-on name=""cmdline"" version=""&gt;=2.1"" version-max=""&lt;3.0"" />
+	|    <depends-on name=""asserts""/>
+	|    <depends-on name=""cmdline"" version=""&gt;=2.1"" version-max=""&lt;3.0""/>
 	|    <executable>src/app1.os</executable>
 	|    <executable>src/app2.os</executable>
 	|    <include-content>src</include-content>
 	|    <include-content>tests</include-content>
 	|    <explicit-modules>
-	|        <module name=""Модуль1"" src=""src/m1.os"" />
-	|        <module name=""Модуль2"" src=""src/m2.os"" />
-	|        <class name=""Класс1"" src=""src/class1.os"" />
-	|        <class name=""Класс2"" src=""src/class2.os"" />
+	|        <module name=""Модуль1"" src=""src/m1.os""/>
+	|        <module name=""Модуль2"" src=""src/m2.os""/>
+	|        <class name=""Класс1"" src=""src/class1.os""/>
+	|        <class name=""Класс2"" src=""src/class2.os""/>
 	|    </explicit-modules>
 	|</opm-metadata>";
 	
@@ -108,8 +108,8 @@
 	|    <engine-version>1.0</engine-version>
 	|    <description>Это пакет для тестирования</description>
 	|    <author-email>mail@server.com</author-email>
-	|    <depends-on name=""asserts"" />
-	|    <depends-on name=""cmdline"" version=""&gt;=2.1"" version-max=""&lt;3.0"" />
+	|    <depends-on name=""asserts""/>
+	|    <depends-on name=""cmdline"" version=""&gt;=2.1"" version-max=""&lt;3.0""/>
 	|    <executable>src/app1.os</executable>
 	|    <executable>src/app2.os</executable>
 	|</opm-metadata>";
@@ -117,7 +117,6 @@
 	Утверждения.ПроверитьРавенство(Эталон, Результат);
 
 КонецПроцедуры
-
 
 Процедура ТестДолжен_ПрочитатьМанифестИзXML() Экспорт
 	
