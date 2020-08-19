@@ -31,10 +31,13 @@
 		.Автор("Я")
 		.Версия("1.0.5")
 		.ВерсияСреды("1.0")
+		.ВерсияМанифеста("1.0")
 		.Описание("Это пакет для тестирования")
 		.АдресАвтора("mail@server.com")
 		.ЗависитОт("asserts")
 		.ЗависитОт("cmdline",">=2.1","<3.0")
+		.РазработкаЗависитОт("logos")
+		.Задачи("tasks")
 		.ВключитьФайл("src")
 		.ВключитьФайл("tests")
 		.ОпределяетМодуль("Модуль1", "src/m1.os")
@@ -60,7 +63,7 @@
 	
 	ЗаписатьМанифест(Запись, СоздатьТестовыйМанифест());
 	
-	Результат = СтрЗаменить(Запись.Закрыть(), Символы.ВК+Символы.ПС, Символы.ПС);
+	Результат = СтрЗаменить(Запись.Закрыть(), Символы.ВК + Символы.ПС, Символы.ПС);
 	Результат = СтрЗаменить(Результат, " />", "/>");
 
 	Эталон = 
@@ -70,10 +73,13 @@
 	|    <author>Я</author>
 	|    <version>1.0.5</version>
 	|    <engine-version>1.0</engine-version>
+	|    <manifest-version>1.0</manifest-version>
 	|    <description>Это пакет для тестирования</description>
 	|    <author-email>mail@server.com</author-email>
-	|    <depends-on name=""asserts""/>
-	|    <depends-on name=""cmdline"" version=""&gt;=2.1"" version-max=""&lt;3.0""/>
+	|    <tasks>tasks</tasks>
+	|    <depends-on name=""asserts"" dev=""false""/>
+	|    <depends-on name=""cmdline"" dev=""false"" version=""&gt;=2.1"" version-max=""&lt;3.0""/>
+	|    <depends-on name=""logos"" dev=""true""/>
 	|    <executable>src/app1.os</executable>
 	|    <executable>src/app2.os</executable>
 	|    <include-content>src</include-content>
@@ -108,10 +114,13 @@
 	|    <author>Я</author>
 	|    <version>1.0.5</version>
 	|    <engine-version>1.0</engine-version>
+	|    <manifest-version>1.0</manifest-version>
 	|    <description>Это пакет для тестирования</description>
 	|    <author-email>mail@server.com</author-email>
-	|    <depends-on name=""asserts""/>
-	|    <depends-on name=""cmdline"" version=""&gt;=2.1"" version-max=""&lt;3.0""/>
+	|    <tasks>tasks</tasks>
+	|    <depends-on name=""asserts"" dev=""false""/>
+	|    <depends-on name=""cmdline"" dev=""false"" version=""&gt;=2.1"" version-max=""&lt;3.0""/>
+	|    <depends-on name=""logos"" dev=""true""/>
 	|    <executable>src/app1.os</executable>
 	|    <executable>src/app2.os</executable>
 	|</opm-metadata>";
